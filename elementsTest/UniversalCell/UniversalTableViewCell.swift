@@ -11,11 +11,9 @@ class UniversalTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-//        let view = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-//        view.backgroundColor = .purple
-//        stackView.addArrangedSubview(view)
-        //setup()
+    }
+    
+    func setupCell(with views: [RSCellElement]){
         
     }
     func setup(){
@@ -34,6 +32,7 @@ class UniversalTableViewCell: UITableViewCell {
         orderDueView.preferredWidth = 126
         let orderTypeView = OrderTypeElement()
         orderTypeView.setup(orderType: "Delivery")
+        orderTypeView.preferredWidth = 126
         let statusView = StatusElement()
         statusView.setup(status: "Waiting")
         statusView.preferredWidth = 126
@@ -54,17 +53,18 @@ class UniversalTableViewCell: UITableViewCell {
         stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
         stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20).isActive = true
         stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
-//        for element in allViews{
-//            element.translatesAutoresizingMaskIntoConstraints = false
-//            myOwnStackView.addArrangedSubview(element)
-//        }
+
         for index in stackView.arrangedSubviews.indices{
-//            guard let widthableView = stackView.arrangedSubviews[index] as? Widthable,
-//                  let preferredWidth = widthableView.preferredWidth else{
-//                return
-//            }
-            //let multiplier = preferredWidth/(contentView.frame.size.width - 20)
-            stackView.arrangedSubviews[index].widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.16).isActive = true
+            let multiplier = calculateMultiplier(of: elements[index] as! Widthable, in: elements as! [Widthable])
+            stackView.arrangedSubviews[index].widthAnchor.constraint(equalTo: stackView.widthAnchor, multiplier: multiplier).isActive = true
+        }
+        func calculateMultiplier(of view: Widthable, in views: [Widthable])->CGFloat{
+            var fullWidth: CGFloat = 0
+            for tempView in views {
+                fullWidth += tempView.preferredWidth ?? 0
+            }
+            let multiplier = (view.preferredWidth ?? 0) / fullWidth
+            return multiplier
         }
     }
     
@@ -82,4 +82,17 @@ class UniversalTableViewCell: UITableViewCell {
 
 protocol Widthable{
     var preferredWidth: CGFloat? {get set}
+}
+
+enum RSCellElement{
+    case imageView
+    case priceAndNumberView
+    case customerInfoView
+    case orderDueView
+    case orderTypeView
+    case statusView
+    case numberAndItemView
+    case nameAndPhoneView
+    case itemsQtyView
+    case timeElapsedView
 }

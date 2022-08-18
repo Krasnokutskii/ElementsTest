@@ -27,7 +27,7 @@ extension UIColor {
     public static let redTypesColor = UIColor(red: 238, green: 95, blue: 111)
     // new Color
     public static let discountPlaceholderColor = UIColor(red: 230, green: 235, blue: 239)
-    public static let revelTextColor = UIColor(red: 4, green: 58, blue: 102)
+    public static let revelTextColor = UIColor(red: 4, green: 58, blue: 102)//textFieldTextColor
     public static let revelProductRed = UIColor(red: 239, green: 96, blue: 112)
     public static let revelProducGreen = UIColor(red: 145, green: 210, blue: 82)
     

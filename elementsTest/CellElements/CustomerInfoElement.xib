@@ -9,33 +9,33 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomerInfoElement" customModule="elementsTest" customModuleProvider="target">
             <connections>
-                <outlet property="customerName" destination="T8Q-Jl-arq" id="EME-PV-Pl2"/>
-                <outlet property="stackView" destination="aF8-oo-PKD" id="Ztk-iQ-J21"/>
-                <outlet property="vehicleInfo" destination="Wzm-su-srb" id="ol8-in-tAK"/>
+                <outlet property="customerName" destination="dGq-yK-eBt" id="6Ta-Wt-b3F"/>
+                <outlet property="stackView" destination="B4b-H8-Ah8" id="8aJ-LI-ejV"/>
+                <outlet property="vehicleInfo" destination="xWo-F7-5ek" id="02D-bV-vaM"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aF8-oo-PKD" userLabel="Customer Stack">
+        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="B4b-H8-Ah8" userLabel="Customer Stack">
             <rect key="frame" x="0.0" y="0.0" width="166" height="165"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T8Q-Jl-arq" userLabel="Customer Name">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGq-yK-eBt" userLabel="Customer Name">
                     <rect key="frame" x="0.0" y="0.0" width="166" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wzm-su-srb" userLabel="VehicleInfo">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xWo-F7-5ek" userLabel="VehicleInfo">
                     <rect key="frame" x="0.0" y="20.5" width="166" height="144.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <viewLayoutGuide key="safeArea" id="tKt-bA-iQZ"/>
+            <viewLayoutGuide key="safeArea" id="x1v-Mb-Fnx"/>
             <constraints>
-                <constraint firstAttribute="width" constant="166" id="1hf-Hf-E26"/>
+                <constraint firstAttribute="width" constant="166" id="mqI-BW-dyG"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="114"/>
+            <point key="canvasLocation" x="-2997" y="-942"/>
         </stackView>
     </objects>
 </document>

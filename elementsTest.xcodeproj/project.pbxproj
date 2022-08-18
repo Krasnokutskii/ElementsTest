@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F70C74F428AE401800FD5B91 /* TimeElapsed.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70C74F328AE401800FD5B91 /* TimeElapsed.swift */; };
+		F70C74F628AE402500FD5B91 /* TimeElapsed.xib in Resources */ = {isa = PBXBuildFile; fileRef = F70C74F528AE402500FD5B91 /* TimeElapsed.xib */; };
 		F724FB4028A96DB700385354 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F724FB3F28A96DB700385354 /* AppDelegate.swift */; };
 		F724FB4228A96DB700385354 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F724FB4128A96DB700385354 /* SceneDelegate.swift */; };
 		F724FB4428A96DB700385354 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F724FB4328A96DB700385354 /* ViewController.swift */; };
@@ -30,9 +32,21 @@
 		F779BD0428AA761B00BD65C0 /* OrderTypeElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = F779BD0328AA761B00BD65C0 /* OrderTypeElement.xib */; };
 		F779BD0628AA76EC00BD65C0 /* StatusElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F779BD0528AA76EC00BD65C0 /* StatusElement.swift */; };
 		F779BD0A28AA773500BD65C0 /* StatusElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = F779BD0928AA773500BD65C0 /* StatusElement.xib */; };
+		F7F1B0A028ACF6CF00B16617 /* DriveThroughQueueOrdersViewControllerTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F1B09E28ACF6CF00B16617 /* DriveThroughQueueOrdersViewControllerTableCell.swift */; };
+		F7F1B0A128ACF6CF00B16617 /* DriveThroughQueueOrdersViewControllerTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7F1B09F28ACF6CF00B16617 /* DriveThroughQueueOrdersViewControllerTableCell.xib */; };
+		F7F1B0A328ACF72C00B16617 /* DoorDashQueueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7F1B0A228ACF72C00B16617 /* DoorDashQueueTableViewCell.xib */; };
+		F7F1B0A528ACF75300B16617 /* DoorDashQueueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F1B0A428ACF75300B16617 /* DoorDashQueueTableViewCell.swift */; };
+		F7F1B0AA28AD05AE00B16617 /* NumberAndItemsElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F1B0A928AD05AE00B16617 /* NumberAndItemsElement.swift */; };
+		F7F1B0AC28AD05BA00B16617 /* NumberAndItemsElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7F1B0AB28AD05BA00B16617 /* NumberAndItemsElement.xib */; };
+		F7F1B0AE28AD10CD00B16617 /* NameAndPhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F1B0AD28AD10CD00B16617 /* NameAndPhoneNumber.swift */; };
+		F7F1B0B028AD10DD00B16617 /* NameAndPhoneNumber.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7F1B0AF28AD10DD00B16617 /* NameAndPhoneNumber.xib */; };
+		F7F1B0B228AD1D1E00B16617 /* ItemsQtyElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F1B0B128AD1D1E00B16617 /* ItemsQtyElement.swift */; };
+		F7F1B0B428AD1D3A00B16617 /* ItemsQtyElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7F1B0B328AD1D3A00B16617 /* ItemsQtyElement.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F70C74F328AE401800FD5B91 /* TimeElapsed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeElapsed.swift; sourceTree = "<group>"; };
+		F70C74F528AE402500FD5B91 /* TimeElapsed.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeElapsed.xib; sourceTree = "<group>"; };
 		F724FB3C28A96DB700385354 /* elementsTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = elementsTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F724FB3F28A96DB700385354 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F724FB4128A96DB700385354 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +72,16 @@
 		F779BD0328AA761B00BD65C0 /* OrderTypeElement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderTypeElement.xib; sourceTree = "<group>"; };
 		F779BD0528AA76EC00BD65C0 /* StatusElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusElement.swift; sourceTree = "<group>"; };
 		F779BD0928AA773500BD65C0 /* StatusElement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatusElement.xib; sourceTree = "<group>"; };
+		F7F1B09E28ACF6CF00B16617 /* DriveThroughQueueOrdersViewControllerTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriveThroughQueueOrdersViewControllerTableCell.swift; sourceTree = "<group>"; };
+		F7F1B09F28ACF6CF00B16617 /* DriveThroughQueueOrdersViewControllerTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DriveThroughQueueOrdersViewControllerTableCell.xib; sourceTree = "<group>"; };
+		F7F1B0A228ACF72C00B16617 /* DoorDashQueueTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoorDashQueueTableViewCell.xib; sourceTree = "<group>"; };
+		F7F1B0A428ACF75300B16617 /* DoorDashQueueTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoorDashQueueTableViewCell.swift; sourceTree = "<group>"; };
+		F7F1B0A928AD05AE00B16617 /* NumberAndItemsElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberAndItemsElement.swift; sourceTree = "<group>"; };
+		F7F1B0AB28AD05BA00B16617 /* NumberAndItemsElement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NumberAndItemsElement.xib; sourceTree = "<group>"; };
+		F7F1B0AD28AD10CD00B16617 /* NameAndPhoneNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameAndPhoneNumber.swift; sourceTree = "<group>"; };
+		F7F1B0AF28AD10DD00B16617 /* NameAndPhoneNumber.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NameAndPhoneNumber.xib; sourceTree = "<group>"; };
+		F7F1B0B128AD1D1E00B16617 /* ItemsQtyElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsQtyElement.swift; sourceTree = "<group>"; };
+		F7F1B0B328AD1D3A00B16617 /* ItemsQtyElement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemsQtyElement.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +120,7 @@
 				F724FB4528A96DB700385354 /* Main.storyboard */,
 				F779BCEF28AA678C00BD65C0 /* UniversalCell */,
 				F779BCF028AA67A100BD65C0 /* CellElements */,
-				F779BCE728AA650200BD65C0 /* OnlineOrdersQueueTableViewCell.swift */,
-				F779BCE828AA650200BD65C0 /* OnlineOrdersQueueTableViewCell.xib */,
+				F7F1B0A628ACF76A00B16617 /* OldStyleCell */,
 				F724FB4828A96DC300385354 /* Assets.xcassets */,
 				F724FB4A28A96DC300385354 /* LaunchScreen.storyboard */,
 				F724FB4D28A96DC300385354 /* Info.plist */,
@@ -130,8 +153,29 @@
 				F779BD0328AA761B00BD65C0 /* OrderTypeElement.xib */,
 				F779BD0528AA76EC00BD65C0 /* StatusElement.swift */,
 				F779BD0928AA773500BD65C0 /* StatusElement.xib */,
+				F7F1B0A928AD05AE00B16617 /* NumberAndItemsElement.swift */,
+				F7F1B0AB28AD05BA00B16617 /* NumberAndItemsElement.xib */,
+				F7F1B0AD28AD10CD00B16617 /* NameAndPhoneNumber.swift */,
+				F7F1B0AF28AD10DD00B16617 /* NameAndPhoneNumber.xib */,
+				F7F1B0B128AD1D1E00B16617 /* ItemsQtyElement.swift */,
+				F7F1B0B328AD1D3A00B16617 /* ItemsQtyElement.xib */,
+				F70C74F328AE401800FD5B91 /* TimeElapsed.swift */,
+				F70C74F528AE402500FD5B91 /* TimeElapsed.xib */,
 			);
 			path = CellElements;
+			sourceTree = "<group>";
+		};
+		F7F1B0A628ACF76A00B16617 /* OldStyleCell */ = {
+			isa = PBXGroup;
+			children = (
+				F779BCE728AA650200BD65C0 /* OnlineOrdersQueueTableViewCell.swift */,
+				F779BCE828AA650200BD65C0 /* OnlineOrdersQueueTableViewCell.xib */,
+				F7F1B09E28ACF6CF00B16617 /* DriveThroughQueueOrdersViewControllerTableCell.swift */,
+				F7F1B09F28ACF6CF00B16617 /* DriveThroughQueueOrdersViewControllerTableCell.xib */,
+				F7F1B0A428ACF75300B16617 /* DoorDashQueueTableViewCell.swift */,
+				F7F1B0A228ACF72C00B16617 /* DoorDashQueueTableViewCell.xib */,
+			);
+			path = OldStyleCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,14 +238,20 @@
 			files = (
 				F779BCFC28AA6FC400BD65C0 /* CustomerInfoElement.xib in Resources */,
 				F779BD0A28AA773500BD65C0 /* StatusElement.xib in Resources */,
+				F7F1B0B028AD10DD00B16617 /* NameAndPhoneNumber.xib in Resources */,
 				F779BD0028AA747200BD65C0 /* OrderDueElement.xib in Resources */,
 				F724FB4C28A96DC300385354 /* LaunchScreen.storyboard in Resources */,
 				F779BD0428AA761B00BD65C0 /* OrderTypeElement.xib in Resources */,
+				F7F1B0A128ACF6CF00B16617 /* DriveThroughQueueOrdersViewControllerTableCell.xib in Resources */,
 				F779BCF828AA6A5500BD65C0 /* PriceAndNumberElement.xib in Resources */,
+				F7F1B0A328ACF72C00B16617 /* DoorDashQueueTableViewCell.xib in Resources */,
+				F70C74F628AE402500FD5B91 /* TimeElapsed.xib in Resources */,
+				F7F1B0AC28AD05BA00B16617 /* NumberAndItemsElement.xib in Resources */,
 				F779BCEE28AA668A00BD65C0 /* UniversalTableViewCell.xib in Resources */,
 				F724FB4928A96DC300385354 /* Assets.xcassets in Resources */,
 				F779BCF428AA683700BD65C0 /* ImageViewElement.xib in Resources */,
 				F724FB4728A96DB700385354 /* Main.storyboard in Resources */,
+				F7F1B0B428AD1D3A00B16617 /* ItemsQtyElement.xib in Resources */,
 				F779BCEA28AA650200BD65C0 /* OnlineOrdersQueueTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,14 +264,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				F724FB4428A96DB700385354 /* ViewController.swift in Sources */,
+				F70C74F428AE401800FD5B91 /* TimeElapsed.swift in Sources */,
 				F779BCED28AA668A00BD65C0 /* UniversalTableViewCell.swift in Sources */,
 				F779BCFE28AA746200BD65C0 /* OrderDueElement.swift in Sources */,
 				F779BD0228AA760800BD65C0 /* OrderTypeElement.swift in Sources */,
 				F724FB4028A96DB700385354 /* AppDelegate.swift in Sources */,
 				F74B914128AB96FF006C04F2 /* UIColor+.swift in Sources */,
 				F779BCF228AA682600BD65C0 /* ImageViewElement.swift in Sources */,
+				F7F1B0B228AD1D1E00B16617 /* ItemsQtyElement.swift in Sources */,
 				F779BCFA28AA6FB900BD65C0 /* CustomerInfoElement.swift in Sources */,
+				F7F1B0A528ACF75300B16617 /* DoorDashQueueTableViewCell.swift in Sources */,
 				F779BCF628AA6A4B00BD65C0 /* PriceAndNumberElement.swift in Sources */,
+				F7F1B0AE28AD10CD00B16617 /* NameAndPhoneNumber.swift in Sources */,
+				F7F1B0A028ACF6CF00B16617 /* DriveThroughQueueOrdersViewControllerTableCell.swift in Sources */,
+				F7F1B0AA28AD05AE00B16617 /* NumberAndItemsElement.swift in Sources */,
 				F724FB4228A96DB700385354 /* SceneDelegate.swift in Sources */,
 				F779BD0628AA76EC00BD65C0 /* StatusElement.swift in Sources */,
 				F779BCE928AA650200BD65C0 /* OnlineOrdersQueueTableViewCell.swift in Sources */,
