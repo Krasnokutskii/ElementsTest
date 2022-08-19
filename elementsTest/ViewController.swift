@@ -22,8 +22,8 @@ class ViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        let universalName = UINib(nibName: UniversalTableViewCell.nibName, bundle:nil)
-        tableView.register(universalName, forCellReuseIdentifier: UniversalTableViewCell.reuseId)
+        let universalName = UINib(nibName: RSUniversalTableViewCell.nibName, bundle:nil)
+        tableView.register(universalName, forCellReuseIdentifier: RSUniversalTableViewCell.reuseId)
     }
     
     
@@ -42,7 +42,7 @@ class ViewController: UIViewController {
 }
 extension ViewController: UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: UniversalTableViewCell.reuseId ,for: indexPath) as? RSUniversalTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: RSUniversalTableViewCell.reuseId ,for: indexPath) as? RSUniversalTableViewCell else {
             return UITableViewCell()
         }
         var elementsArr: [RSCellElement]
@@ -81,7 +81,7 @@ extension ViewController: UITableViewDataSource,UITableViewDelegate{
         orders.count
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 88
+        return 102
     }
 }
 

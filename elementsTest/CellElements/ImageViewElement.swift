@@ -40,3 +40,7 @@ class ImageViewElement: UIView, Widthable {
         }
     }
 }
+
+class ImageViewSpecificElement: ImageViewElement{
+    
+}

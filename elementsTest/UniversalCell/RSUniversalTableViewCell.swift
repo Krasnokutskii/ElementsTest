@@ -7,13 +7,13 @@
 
 import UIKit
 
-class UniversalTableViewCell: UITableViewCell {
+class RSUniversalTableViewCell: UITableViewCell {
 
+    static let reuseId = "RSUniversalTableViewCell"
+    static let nibName = "RSUniversalTableViewCell"
     override func awakeFromNib() {
         super.awakeFromNib()
-//        preservesSuperviewLayoutMargins = false
         separatorInset = UIEdgeInsets.zero
-//        layoutMargins = UIEdgeInsets.zero
         //add margins from left and right to stack view
     }
     
@@ -89,16 +89,7 @@ class UniversalTableViewCell: UITableViewCell {
     
     private func createStackView(with elements: [UIView]){
         let stackView = UIStackView(arrangedSubviews: elements)
-        stackView.axis = .horizontal
-        stackView.alignment = .center
-        stackView.spacing = 0
-        stackView.distribution = .fill
-        contentView.addSubview(stackView)
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
-        stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
-        stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20).isActive = true
-        stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
+        setupStackView(stackView: stackView)
 
         for index in stackView.arrangedSubviews.indices{
             let multiplier = calculateMultiplier(of: elements[index] as! Widthable, in: elements as! [Widthable])
@@ -114,12 +105,33 @@ class UniversalTableViewCell: UITableViewCell {
         }
     }
     
+    private func setupStackView(stackView: UIStackView){
+        stackView.axis = .horizontal
+        stackView.alignment = .center
+        stackView.spacing = 0
+        stackView.distribution = .fill
+        stackView.isLayoutMarginsRelativeArrangement = true
+        stackView.layoutMargins = UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 0)
+        contentView.addSubview(stackView)
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
+        stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
+        stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
+        stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         if selected {
             contentView.backgroundColor = UIColor.white
         } else {
             contentView.backgroundColor = UIColor.discountPlaceholderColor.withAlphaComponent(0.65)
+        }
+    }
+    
+    override func prepareForReuse() {
+        for reusedView in contentView.subviews{
+            reusedView.removeFromSuperview()
         }
     }
     
