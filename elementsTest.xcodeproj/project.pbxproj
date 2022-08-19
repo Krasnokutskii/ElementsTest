@@ -12,6 +12,7 @@
 		F70C74FA28AEA51200FD5B91 /* NameAndPhoneNumber.xib in Resources */ = {isa = PBXBuildFile; fileRef = F70C74F928AEA51200FD5B91 /* NameAndPhoneNumber.xib */; };
 		F70C750228AF889E00FD5B91 /* RSUniversalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F70C750128AF889E00FD5B91 /* RSUniversalTableViewCell.xib */; };
 		F70C750628AFA33C00FD5B91 /* someSpecific.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70C750528AFA33C00FD5B91 /* someSpecific.swift */; };
+		F70C750828AFD03D00FD5B91 /* SuperUniversalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70C750728AFD03D00FD5B91 /* SuperUniversalCell.swift */; };
 		F724FB4028A96DB700385354 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F724FB3F28A96DB700385354 /* AppDelegate.swift */; };
 		F724FB4228A96DB700385354 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F724FB4128A96DB700385354 /* SceneDelegate.swift */; };
 		F724FB4428A96DB700385354 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F724FB4328A96DB700385354 /* ViewController.swift */; };
@@ -51,6 +52,7 @@
 		F70C74F928AEA51200FD5B91 /* NameAndPhoneNumber.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NameAndPhoneNumber.xib; sourceTree = "<group>"; };
 		F70C750128AF889E00FD5B91 /* RSUniversalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RSUniversalTableViewCell.xib; sourceTree = "<group>"; };
 		F70C750528AFA33C00FD5B91 /* someSpecific.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = someSpecific.swift; sourceTree = "<group>"; };
+		F70C750728AFD03D00FD5B91 /* SuperUniversalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperUniversalCell.swift; sourceTree = "<group>"; };
 		F724FB3C28A96DB700385354 /* elementsTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = elementsTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F724FB3F28A96DB700385354 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F724FB4128A96DB700385354 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				F70C750528AFA33C00FD5B91 /* someSpecific.swift */,
+				F70C750728AFD03D00FD5B91 /* SuperUniversalCell.swift */,
 			);
 			path = test;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				F724FB4228A96DB700385354 /* SceneDelegate.swift in Sources */,
 				F779BD0628AA76EC00BD65C0 /* StatusElement.swift in Sources */,
 				F779BCE928AA650200BD65C0 /* OnlineOrdersQueueTableViewCell.swift in Sources */,
+				F70C750828AFD03D00FD5B91 /* SuperUniversalCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -25,9 +25,9 @@ class RSUniversalTableViewCell: UITableViewCell, ElementCustomisable{
     
     func setup(with views: [UIView]){
         self.elements = views
-        createStackView()
+        initializeStackView()
     }
-    private func createStackView(){
+    func initializeStackView(){
         stackView = UIStackView(arrangedSubviews: elements)
         setupStackView(stackView: stackView)
 
@@ -37,12 +37,8 @@ class RSUniversalTableViewCell: UITableViewCell, ElementCustomisable{
         }
         
         func calculateMultiplier(of view: UIView, in views: [UIView])->CGFloat{
-            var fullWidth: CGFloat = 0
-            for tempView in views{
-                fullWidth += tempView.frame.width
-            }
-            let multiplier = (view.frame.width)/fullWidth
-            return multiplier
+            let fullWidth: CGFloat = views.reduce(0){$0 + $1.frame.width}
+            return (view.frame.width)/fullWidth
         }
     }
     

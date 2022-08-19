@@ -38,7 +38,3 @@ class ImageViewElement: UIView{
         }
     }
 }
-
-class ImageViewSpecificElement: ImageViewElement{
-    
-}
