@@ -11,6 +11,7 @@ class StatusElement: UIView, Widthable{
     var preferredWidth: CGFloat?
     
 
+    @IBOutlet var containerView: UIView!
     @IBOutlet var statusLabel: UILabel!
    
     override init(frame: CGRect) {
@@ -25,9 +26,9 @@ class StatusElement: UIView, Widthable{
     
     private func commonInit(){
         Bundle.main.loadNibNamed("StatusElement", owner: self)
-        addSubview(statusLabel)
-        statusLabel.frame = self.bounds
-        statusLabel.autoresizingMask = [.flexibleWidth,.flexibleHeight]
+        addSubview(containerView)
+        containerView.frame = self.bounds
+        containerView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
         statusLabel.textColor = UIColor.astronautBlue
         statusLabel.textAlignment = .center
     }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F70C74F428AE401800FD5B91 /* TimeElapsed.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70C74F328AE401800FD5B91 /* TimeElapsed.swift */; };
 		F70C74F628AE402500FD5B91 /* TimeElapsed.xib in Resources */ = {isa = PBXBuildFile; fileRef = F70C74F528AE402500FD5B91 /* TimeElapsed.xib */; };
+		F70C74FA28AEA51200FD5B91 /* NameAndPhoneNumber.xib in Resources */ = {isa = PBXBuildFile; fileRef = F70C74F928AEA51200FD5B91 /* NameAndPhoneNumber.xib */; };
 		F724FB4028A96DB700385354 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F724FB3F28A96DB700385354 /* AppDelegate.swift */; };
 		F724FB4228A96DB700385354 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F724FB4128A96DB700385354 /* SceneDelegate.swift */; };
 		F724FB4428A96DB700385354 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F724FB4328A96DB700385354 /* ViewController.swift */; };
@@ -39,7 +40,6 @@
 		F7F1B0AA28AD05AE00B16617 /* NumberAndItemsElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F1B0A928AD05AE00B16617 /* NumberAndItemsElement.swift */; };
 		F7F1B0AC28AD05BA00B16617 /* NumberAndItemsElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7F1B0AB28AD05BA00B16617 /* NumberAndItemsElement.xib */; };
 		F7F1B0AE28AD10CD00B16617 /* NameAndPhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F1B0AD28AD10CD00B16617 /* NameAndPhoneNumber.swift */; };
-		F7F1B0B028AD10DD00B16617 /* NameAndPhoneNumber.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7F1B0AF28AD10DD00B16617 /* NameAndPhoneNumber.xib */; };
 		F7F1B0B228AD1D1E00B16617 /* ItemsQtyElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F1B0B128AD1D1E00B16617 /* ItemsQtyElement.swift */; };
 		F7F1B0B428AD1D3A00B16617 /* ItemsQtyElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7F1B0B328AD1D3A00B16617 /* ItemsQtyElement.xib */; };
 /* End PBXBuildFile section */
@@ -47,6 +47,7 @@
 /* Begin PBXFileReference section */
 		F70C74F328AE401800FD5B91 /* TimeElapsed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeElapsed.swift; sourceTree = "<group>"; };
 		F70C74F528AE402500FD5B91 /* TimeElapsed.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeElapsed.xib; sourceTree = "<group>"; };
+		F70C74F928AEA51200FD5B91 /* NameAndPhoneNumber.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NameAndPhoneNumber.xib; sourceTree = "<group>"; };
 		F724FB3C28A96DB700385354 /* elementsTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = elementsTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F724FB3F28A96DB700385354 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F724FB4128A96DB700385354 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,7 +80,6 @@
 		F7F1B0A928AD05AE00B16617 /* NumberAndItemsElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberAndItemsElement.swift; sourceTree = "<group>"; };
 		F7F1B0AB28AD05BA00B16617 /* NumberAndItemsElement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NumberAndItemsElement.xib; sourceTree = "<group>"; };
 		F7F1B0AD28AD10CD00B16617 /* NameAndPhoneNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameAndPhoneNumber.swift; sourceTree = "<group>"; };
-		F7F1B0AF28AD10DD00B16617 /* NameAndPhoneNumber.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NameAndPhoneNumber.xib; sourceTree = "<group>"; };
 		F7F1B0B128AD1D1E00B16617 /* ItemsQtyElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsQtyElement.swift; sourceTree = "<group>"; };
 		F7F1B0B328AD1D3A00B16617 /* ItemsQtyElement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemsQtyElement.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -156,7 +156,7 @@
 				F7F1B0A928AD05AE00B16617 /* NumberAndItemsElement.swift */,
 				F7F1B0AB28AD05BA00B16617 /* NumberAndItemsElement.xib */,
 				F7F1B0AD28AD10CD00B16617 /* NameAndPhoneNumber.swift */,
-				F7F1B0AF28AD10DD00B16617 /* NameAndPhoneNumber.xib */,
+				F70C74F928AEA51200FD5B91 /* NameAndPhoneNumber.xib */,
 				F7F1B0B128AD1D1E00B16617 /* ItemsQtyElement.swift */,
 				F7F1B0B328AD1D3A00B16617 /* ItemsQtyElement.xib */,
 				F70C74F328AE401800FD5B91 /* TimeElapsed.swift */,
@@ -238,8 +238,8 @@
 			files = (
 				F779BCFC28AA6FC400BD65C0 /* CustomerInfoElement.xib in Resources */,
 				F779BD0A28AA773500BD65C0 /* StatusElement.xib in Resources */,
-				F7F1B0B028AD10DD00B16617 /* NameAndPhoneNumber.xib in Resources */,
 				F779BD0028AA747200BD65C0 /* OrderDueElement.xib in Resources */,
+				F70C74FA28AEA51200FD5B91 /* NameAndPhoneNumber.xib in Resources */,
 				F724FB4C28A96DC300385354 /* LaunchScreen.storyboard in Resources */,
 				F779BD0428AA761B00BD65C0 /* OrderTypeElement.xib in Resources */,
 				F7F1B0A128ACF6CF00B16617 /* DriveThroughQueueOrdersViewControllerTableCell.xib in Resources */,

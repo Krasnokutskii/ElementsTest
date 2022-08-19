@@ -35,23 +35,23 @@ class DoorDashQueueTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setupWithOrder(_ order: Order) {
-        orderIDLabel.text = order.displayId
-        numberOfItemsLabel.text = "\(order.numberOfItems)" + (order.numberOfItems > 0 ? order.numberOfItems == 1 ? " item" : " items" : "")
-        customerCallNameLabel.text = order.customerName
-        phoneNumberLabel.text = order.phone
-        statusLabel.text = order.statusTitle
-        pickupDateLabel.text = order.pickupDate
-        pickupDateLabel.isHidden = order.pickupDate.isEmpty
-        pickupTimeLabel.text = order.pickupTime
-    }
+//    func setupWithOrder(_ order: Order) {
+//        orderIDLabel.text = order.displayId
+//        numberOfItemsLabel.text = "\(order.numberOfItems)" + (order.numberOfItems > 0 ? order.numberOfItems == 1 ? " item" : " items" : "")
+//        customerCallNameLabel.text = order.customerName
+//        phoneNumberLabel.text = order.phone
+//        statusLabel.text = order.statusTitle
+//        pickupDateLabel.text = order.pickupDate
+//        pickupDateLabel.isHidden = order.pickupDate.isEmpty
+//        pickupTimeLabel.text = order.pickupTime
+//    }
 }
-struct Order{
-    var displayId: String
-    var numberOfItems: Int
-    var customerName: String
-    var phone: String
-    var statusTitle: String
-    var pickupDate: String
-    var pickupTime: String
-}
+//struct Order{
+//    var displayId: String
+//    var numberOfItems: Int
+//    var customerName: String
+//    var phone: String
+//    var statusTitle: String
+//    var pickupDate: String
+//    var pickupTime: String
+//}

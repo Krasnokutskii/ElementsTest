@@ -7,7 +7,9 @@
 
 import UIKit
 
-class ItemsQtyElement: UIView {
+class ItemsQtyElement: UIView, Widthable{
+    var preferredWidth: CGFloat?
+    
 
     @IBOutlet var containerView: UIView!
     @IBOutlet var itemsQty: UILabel!

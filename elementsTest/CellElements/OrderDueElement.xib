@@ -9,33 +9,49 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OrderDueElement" customModule="elementsTest" customModuleProvider="target">
             <connections>
+                <outlet property="containerView" destination="WqJ-xG-tAf" id="ruL-fi-LhU"/>
                 <outlet property="dayLabel" destination="ber-RS-qTj" id="ev1-04-ixj"/>
                 <outlet property="stackView" destination="wLf-E5-FmW" id="hCp-Ee-AXp"/>
                 <outlet property="timeLabel" destination="5Ro-KR-fUX" id="9Jv-fY-2BK"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wLf-E5-FmW" userLabel="Order Due Stack">
-            <rect key="frame" x="0.0" y="0.0" width="126" height="165"/>
+        <view contentMode="scaleToFill" id="WqJ-xG-tAf">
+            <rect key="frame" x="0.0" y="0.0" width="126" height="150"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ro-KR-fUX" userLabel="Time  Label">
-                    <rect key="frame" x="0.0" y="0.0" width="126" height="20.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ber-RS-qTj" userLabel="Day Label">
-                    <rect key="frame" x="0.0" y="20.5" width="126" height="144.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wLf-E5-FmW" userLabel="Order Due Stack">
+                    <rect key="frame" x="0.0" y="0.0" width="126" height="150"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ro-KR-fUX" userLabel="Time  Label">
+                            <rect key="frame" x="0.0" y="0.0" width="126" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ber-RS-qTj" userLabel="Day Label">
+                            <rect key="frame" x="0.0" y="20.5" width="126" height="129.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="zNx-G0-ltE"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="126" id="qPZ-qv-7s3"/>
+                    </constraints>
+                </stackView>
             </subviews>
-            <viewLayoutGuide key="safeArea" id="zNx-G0-ltE"/>
+            <viewLayoutGuide key="safeArea" id="jbO-ci-bsc"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstAttribute="width" constant="126" id="qPZ-qv-7s3"/>
+                <constraint firstItem="jbO-ci-bsc" firstAttribute="bottom" secondItem="wLf-E5-FmW" secondAttribute="bottom" id="FFA-kE-PvB"/>
+                <constraint firstItem="wLf-E5-FmW" firstAttribute="leading" secondItem="WqJ-xG-tAf" secondAttribute="leading" id="S5d-zu-rx2"/>
+                <constraint firstAttribute="trailing" secondItem="wLf-E5-FmW" secondAttribute="trailing" id="bdD-ve-iNs"/>
+                <constraint firstItem="wLf-E5-FmW" firstAttribute="top" secondItem="WqJ-xG-tAf" secondAttribute="top" id="tfr-16-wfX"/>
             </constraints>
-            <point key="canvasLocation" x="-20" y="-2"/>
-        </stackView>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-435" y="30"/>
+        </view>
     </objects>
 </document>

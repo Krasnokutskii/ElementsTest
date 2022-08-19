@@ -10,6 +10,7 @@ import UIKit
 class OrderDueElement: UIView, Widthable{
     var preferredWidth: CGFloat?
     
+    @IBOutlet var containerView: UIView!
     @IBOutlet var stackView: UIStackView!
     
     @IBOutlet var timeLabel: UILabel!
@@ -27,9 +28,9 @@ class OrderDueElement: UIView, Widthable{
     
     private func commonInit(){
         Bundle.main.loadNibNamed("OrderDueElement", owner: self)
-        addSubview(stackView)
-        stackView.frame = self.bounds
-        stackView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
+        addSubview(containerView)
+        containerView.frame = self.bounds
+        containerView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
         timeLabel.textColor = UIColor.astronautBlue
         dayLabel.textColor = UIColor.astronautBlue.withAlphaComponent(0.65)
     }

@@ -2,25 +2,43 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20037"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OrderTypeElement" customModule="elementsTest" customModuleProvider="target">
             <connections>
+                <outlet property="containerView" destination="nNY-uv-xzx" id="M1d-Ew-fOE"/>
                 <outlet property="orderTypeLabel" destination="clN-FM-99d" id="Gir-kZ-w64"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clN-FM-99d" userLabel="Order Type Label">
-            <rect key="frame" x="0.0" y="0.0" width="126" height="165"/>
+        <view contentMode="scaleToFill" id="nNY-uv-xzx">
+            <rect key="frame" x="0.0" y="0.0" width="126" height="150"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clN-FM-99d" userLabel="Order Type Label">
+                    <rect key="frame" x="0.0" y="0.0" width="126" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="126" id="bL9-hf-bmr"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="IHs-dc-o1j"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstAttribute="width" constant="126" id="bL9-hf-bmr"/>
+                <constraint firstItem="clN-FM-99d" firstAttribute="trailing" secondItem="IHs-dc-o1j" secondAttribute="trailing" id="3dD-ul-6dX"/>
+                <constraint firstItem="clN-FM-99d" firstAttribute="centerY" secondItem="nNY-uv-xzx" secondAttribute="centerY" id="4XW-6K-eFU"/>
+                <constraint firstItem="clN-FM-99d" firstAttribute="leading" secondItem="IHs-dc-o1j" secondAttribute="leading" id="4Z9-G4-W3B"/>
+                <constraint firstAttribute="bottom" secondItem="clN-FM-99d" secondAttribute="bottom" id="Zt0-gs-VSH"/>
+                <constraint firstItem="clN-FM-99d" firstAttribute="top" secondItem="nNY-uv-xzx" secondAttribute="top" id="iP6-Mm-HUw"/>
             </constraints>
-            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-            <nil key="textColor"/>
-            <nil key="highlightedColor"/>
-            <point key="canvasLocation" x="-22" y="51"/>
-        </label>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-506" y="18"/>
+        </view>
     </objects>
 </document>

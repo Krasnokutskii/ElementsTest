@@ -7,8 +7,11 @@
 
 import UIKit
 
-class NameAndPhoneNumber: UIView {
-    @IBOutlet var stackView: UIStackView!
+class NameAndPhoneNumber: UIView, Widthable {
+    var preferredWidth: CGFloat?
+    
+    
+    @IBOutlet var containerView: UIView!
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var phoneNumberLabel: UILabel!
     
@@ -24,9 +27,9 @@ class NameAndPhoneNumber: UIView {
     
     private func commonInit(){
         Bundle.main.loadNibNamed("NameAndPhoneNumber", owner: self)
-        addSubview(stackView)
-        stackView.frame = self.bounds
-        stackView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
+        addSubview(containerView)
+        containerView.frame = self.bounds
+        containerView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
         nameLabel.textColor = UIColor.astronautBlue
         phoneNumberLabel.textColor = UIColor.astronautBlue.withAlphaComponent(0.65)
     }

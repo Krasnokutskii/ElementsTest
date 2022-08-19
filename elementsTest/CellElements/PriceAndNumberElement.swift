@@ -31,7 +31,7 @@ class PriceAndNumberElement: UIView, Widthable{
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
-        orderNumberLabel.textColor = UIColor.astronautBlue.withAlphaComponent(0.35)
+        orderNumberLabel.textColor = UIColor.astronautBlue.withAlphaComponent(0.65)
     }
     
     func setup(orderNumber: String, price: String, isPaid: Bool){

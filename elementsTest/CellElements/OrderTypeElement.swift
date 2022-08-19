@@ -11,6 +11,7 @@ class OrderTypeElement: UIView, Widthable{
     var preferredWidth: CGFloat?
     
 
+    @IBOutlet var containerView: UIView!
     @IBOutlet var orderTypeLabel: UILabel!
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -24,9 +25,9 @@ class OrderTypeElement: UIView, Widthable{
     
     private func commonInit(){
         Bundle.main.loadNibNamed("OrderTypeElement", owner: self)
-        addSubview(orderTypeLabel)
-        orderTypeLabel.frame = self.bounds
-        orderTypeLabel.autoresizingMask = [.flexibleWidth,.flexibleHeight]
+        addSubview(containerView)
+        containerView.frame = self.bounds
+        containerView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
         orderTypeLabel.textColor = UIColor.astronautBlue
     }
     

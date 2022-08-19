@@ -9,31 +9,44 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NameAndPhoneNumber" customModule="elementsTest" customModuleProvider="target">
             <connections>
-                <outlet property="nameLabel" destination="uqR-oA-Ksn" id="3DS-g3-TdU"/>
-                <outlet property="phoneNumberLabel" destination="hcL-wR-YKd" id="6qK-W8-cpi"/>
-                <outlet property="stackView" destination="DDy-f8-mk0" id="bir-jG-rfC"/>
+                <outlet property="containerView" destination="SMx-3T-5Yz" id="sNI-bd-if2"/>
+                <outlet property="nameLabel" destination="UnS-37-k9j" id="hWB-rM-xPo"/>
+                <outlet property="phoneNumberLabel" destination="6e4-fk-lS0" id="LkE-cl-9eh"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" id="DDy-f8-mk0">
-            <rect key="frame" x="0.0" y="0.0" width="212" height="53"/>
+        <view contentMode="scaleToFill" id="SMx-3T-5Yz">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="100"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem Ipsum" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uqR-oA-Ksn">
-                    <rect key="frame" x="0.0" y="0.0" width="212" height="20.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.019607843140000001" green="0.23137254900000001" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(404)222-2222" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcL-wR-YKd">
-                    <rect key="frame" x="0.0" y="32.5" width="212" height="20.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.019607843140000001" green="0.23137254900000001" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="gJW-Qq-E4u">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="100"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Lorem Ipsum" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UnS-37-k9j">
+                            <rect key="frame" x="0.0" y="0.0" width="300" height="67.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.019607843140000001" green="0.23137254900000001" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(404)222-2222" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6e4-fk-lS0">
+                            <rect key="frame" x="0.0" y="79.5" width="300" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.019607843140000001" green="0.23137254900000001" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
             </subviews>
-            <viewLayoutGuide key="safeArea" id="C6R-0h-bEv"/>
-            <point key="canvasLocation" x="139" y="75"/>
-        </stackView>
+            <viewLayoutGuide key="safeArea" id="2dk-bd-qbc"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="gJW-Qq-E4u" secondAttribute="trailing" id="OnW-lt-NRP"/>
+                <constraint firstItem="gJW-Qq-E4u" firstAttribute="top" secondItem="SMx-3T-5Yz" secondAttribute="top" id="YDi-rx-Ocr"/>
+                <constraint firstItem="gJW-Qq-E4u" firstAttribute="leading" secondItem="SMx-3T-5Yz" secondAttribute="leading" id="bAc-fN-ooM"/>
+                <constraint firstItem="2dk-bd-qbc" firstAttribute="bottom" secondItem="gJW-Qq-E4u" secondAttribute="bottom" id="vdw-xs-Kc5"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-151" y="139"/>
+        </view>
     </objects>
 </document>

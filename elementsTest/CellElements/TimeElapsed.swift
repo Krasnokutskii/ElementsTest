@@ -7,7 +7,9 @@
 
 import UIKit
 
-class TimeElapsed: UIView {
+class TimeElapsed: UIView, Widthable{
+    var preferredWidth: CGFloat?
+    
     @IBOutlet var containerView: UIView!
     @IBOutlet var timeElapsedLabel: UILabel!
    
@@ -29,8 +31,8 @@ class TimeElapsed: UIView {
         timeElapsedLabel.textColor = UIColor.revelTextColor
     }
     
-    func setup(quantity: Int, isOverdue: Bool){
-        timeElapsedLabel.text = "\(quantity)"
+    func setup(timeElapsed: String, isOverdue: Bool){
+        timeElapsedLabel.text = "\(timeElapsed)"
         if isOverdue {
             timeElapsedLabel.textColor = UIColor.revelProductRed
         }

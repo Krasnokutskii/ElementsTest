@@ -7,8 +7,11 @@
 
 import UIKit
 
-class NumberAndItemsElement: UIView {
-    @IBOutlet var stackView: UIStackView!
+class NumberAndItemsElement: UIView, Widthable {
+    var preferredWidth: CGFloat?
+    
+   
+    @IBOutlet var containerView: UIView!
     @IBOutlet var numberLabel: UILabel!
     @IBOutlet var itemsLabel: UILabel!
    
@@ -24,9 +27,9 @@ class NumberAndItemsElement: UIView {
     
     private func commonInit(){
         Bundle.main.loadNibNamed("NumberAndItemsElement", owner: self)
-        addSubview(stackView)
-        stackView.frame = self.bounds
-        stackView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
+        addSubview(containerView)
+        containerView.frame = self.bounds
+        containerView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
         numberLabel.textColor = UIColor.astronautBlue.withAlphaComponent(0.65)
         itemsLabel.textColor = UIColor.astronautBlue
     }

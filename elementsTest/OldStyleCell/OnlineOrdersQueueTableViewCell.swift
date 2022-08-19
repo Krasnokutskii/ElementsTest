@@ -6,34 +6,34 @@
 //
 
 //import RVC
-import UIKit
-
-class OnlineOrdersQueueTableViewCell: UITableViewCell {
-    @IBOutlet var sourceImage: UIImageView!
-    @IBOutlet var orderId: UILabel!
-    @IBOutlet var priceView: UIView!
-    @IBOutlet var priceLabel: UILabel!
-    @IBOutlet var customerNameLabel: UILabel!
-    @IBOutlet var vehicleInfoLabel: UILabel!
-    @IBOutlet var timeLabel: UILabel!
-    @IBOutlet var dayLabel: UILabel!
-    @IBOutlet var orderTypeLabel: UILabel!
-    @IBOutlet var statusLabel: UILabel!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-        //statusLabel.textAlignment = .center
-        
-//        let topLabels = [customerNameLabel, timeLabel, statusLabel, orderTypeLabel]
-//        let bottomLabels = [vehicleInfoLabel, dayLabel, orderId]
-        
-//        topLabels.forEach { $0?.textColor = UIColor.astronautBlue() }
-//        bottomLabels.forEach { $0?.textColor = UIColor.astronautBlue().withAlphaComponent(0.65) }
-        preservesSuperviewLayoutMargins = false //???????????????
-        separatorInset = UIEdgeInsets.zero
-        layoutMargins = UIEdgeInsets.zero
-    }
+//import UIKit
+//
+//class OnlineOrdersQueueTableViewCell: UITableViewCell {
+//    @IBOutlet var sourceImage: UIImageView!
+//    @IBOutlet var orderId: UILabel!
+//    @IBOutlet var priceView: UIView!
+//    @IBOutlet var priceLabel: UILabel!
+//    @IBOutlet var customerNameLabel: UILabel!
+//    @IBOutlet var vehicleInfoLabel: UILabel!
+//    @IBOutlet var timeLabel: UILabel!
+//    @IBOutlet var dayLabel: UILabel!
+//    @IBOutlet var orderTypeLabel: UILabel!
+//    @IBOutlet var statusLabel: UILabel!
+//
+//    override func awakeFromNib() {
+//        super.awakeFromNib()
+//        // Initialization code
+//        //statusLabel.textAlignment = .center
+//
+////        let topLabels = [customerNameLabel, timeLabel, statusLabel, orderTypeLabel]
+////        let bottomLabels = [vehicleInfoLabel, dayLabel, orderId]
+//
+////        topLabels.forEach { $0?.textColor = UIColor.astronautBlue() }
+////        bottomLabels.forEach { $0?.textColor = UIColor.astronautBlue().withAlphaComponent(0.65) }
+//        preservesSuperviewLayoutMargins = false //???????????????
+//        separatorInset = UIEdgeInsets.zero
+//        layoutMargins = UIEdgeInsets.zero
+//    }
 
 //    override func setSelected(_ selected: Bool, animated: Bool) {
 //        super.setSelected(selected, animated: animated)
@@ -45,8 +45,8 @@ class OnlineOrdersQueueTableViewCell: UITableViewCell {
 //        }
 //    }
     
-   // func setupWithOrder(_ order: OnlineOrdersQueueViewModel.Order, andImage image: UIImage?) {
- //       setupImage(image)
+//    func setupWithOrder(_ order: OnlineOrdersQueueViewModel.Order, andImage image: UIImage?) {
+//        setupImage(image)
 //        orderId.text = (order.displayId)
 //        priceLabel.text = order.total
 //        priceLabel.textColor = order.isPaid ? RSUIThemeCommon.textFieldTextColor() : UIColor.white
@@ -65,7 +65,7 @@ class OnlineOrdersQueueTableViewCell: UITableViewCell {
 //        orderTypeLabel.text = order.orderType
 //        statusLabel.text = order.statusTitle
 //    }
-
+//
 //    func setupImage(_ image: UIImage?) {
 //        if let sourceLogoImage = image {
 //            sourceImage.isHidden = false
@@ -74,4 +74,4 @@ class OnlineOrdersQueueTableViewCell: UITableViewCell {
 //            sourceImage.isHidden = false
 //        }
 //    }
-}
+//}

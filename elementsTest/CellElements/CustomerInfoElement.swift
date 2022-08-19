@@ -9,6 +9,7 @@ import UIKit
 
 class CustomerInfoElement: UIView, Widthable{
     var preferredWidth: CGFloat?
+    @IBOutlet var containerView: UIView!
     @IBOutlet var stackView: UIStackView!
     @IBOutlet var customerName: UILabel!
     @IBOutlet var vehicleInfo: UILabel!
@@ -25,12 +26,11 @@ class CustomerInfoElement: UIView, Widthable{
     
     private func commonInit(){
         Bundle.main.loadNibNamed("CustomerInfoElement", owner: self)
-        addSubview(stackView)
-        stackView.frame = self.bounds
-        stackView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
-        customerName.textColor = UIColor.astronautBlue //RVC
-        vehicleInfo.textColor = UIColor.astronautBlue.withAlphaComponent(0.65)//RVC
-        
+        addSubview(containerView)
+        containerView.frame = self.bounds
+        containerView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
+        customerName.textColor = UIColor.astronautBlue
+        vehicleInfo.textColor = UIColor.revelTextColor.withAlphaComponent(0.65)
     }
     
     func setup(customerName: String, vehicleInfo: String? = nil ) {
