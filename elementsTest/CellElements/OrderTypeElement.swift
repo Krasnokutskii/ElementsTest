@@ -7,9 +7,7 @@
 
 import UIKit
 
-class OrderTypeElement: UIView, Widthable{
-    var preferredWidth: CGFloat?
-    
+class OrderTypeElement: UIView {
 
     @IBOutlet var containerView: UIView!
     @IBOutlet var orderTypeLabel: UILabel!

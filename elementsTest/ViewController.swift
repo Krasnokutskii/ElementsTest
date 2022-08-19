@@ -45,38 +45,62 @@ extension ViewController: UITableViewDataSource,UITableViewDelegate{
         guard let cell = tableView.dequeueReusableCell(withIdentifier: RSUniversalTableViewCell.reuseId ,for: indexPath) as? RSUniversalTableViewCell else {
             return UITableViewCell()
         }
-        var elementsArr: [RSCellElement]
-        switch customCell{
-        case .universalOnline:
-        elementsArr = [
-            .imageView(82),
-            .priceAndNumberView(120),
-            .customerInfoView(166),
-            .orderDueView(120),
-            .orderTypeView(126),
-            .statusView(126)
-            ]
-        case .universalDriveThrough:
-        elementsArr = [
-            .priceAndNumberView(136),
-            .timeElapsedView(136),
-            .itemsQtyView(50),
-            .customerInfoView(160),
-            .statusView(136)
-        ]
-        case .universalDoorDash:
-            elementsArr = [
-                .numberAndItemView(120),
-                .nameAndPhoneView(166),
-                .orderDueView(120),
-                .statusView(166)
-            ]
-        }
-        cell.setupCell(elements: elementsArr, with: orders[indexPath.row])
+        
+        cell.setup(with: createAllElements())
+        
+        
+        
+        
+        
+        
+//        var elementsArr: [RSCellElement]
+//        switch customCell{
+//        case .universalOnline:
+//        elementsArr = [
+//            .imageView(82),
+//            .priceAndNumberView(120),
+//            .customerInfoView(166),
+//            .orderDueView(120),
+//            .orderTypeView(126),
+//            .statusView(126)
+//            ]
+//        case .universalDriveThrough:
+//        elementsArr = [
+//            .priceAndNumberView(136),
+//            .timeElapsedView(136),
+//            .itemsQtyView(50),
+//            .customerInfoView(160),
+//            .statusView(136)
+//        ]
+//        case .universalDoorDash:
+//            elementsArr = [
+//                .numberAndItemView(120),
+//                .nameAndPhoneView(166),
+//                .orderDueView(120),
+//                .statusView(166)
+//            ]
+//        }
+//        cell.setupCell(elements: elementsArr, with: orders[indexPath.row])
 
         return cell
     }
     
+    private func createAllElements()->[UIView]{
+        var allViews: [UIView] = []
+        let imageElement = ImageViewElement(frame: CGRect(x: 0, y: 0, width: 30, height: 80))
+        imageElement.setupImage(UIImage(systemName:"airtag"))
+        allViews.append(imageElement)
+        
+        let priceAndNumber = PriceAndNumberElement(frame: CGRect(x: 0, y: 0, width: 300, height: 160))
+        priceAndNumber.setup(orderNumber: "123456", price: "$33.5", isPaid: true)
+        allViews.append(priceAndNumber)
+        
+        let specificView = SpecificViewElement(frame: CGRect(x: 0, y: 0, width: 100, height: 160))
+        specificView.setup(orderNumber: "123456", price: "&41.50", isPaid: true)
+        allViews.append(specificView)
+        return allViews
+        
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         orders.count
     }
@@ -92,7 +116,7 @@ enum CustomCell{
     case universalDoorDash
 }
 
-struct Order: OrderProtocol{
+struct Order{
     var displayId: String
     
     var total: String

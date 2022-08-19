@@ -7,10 +7,8 @@
 
 import UIKit
 
-class ImageViewElement: UIView, Widthable {
-    var preferredWidth: CGFloat?
+class ImageViewElement: UIView{
     
-
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var imageView: UIImageView!
     
@@ -31,7 +29,7 @@ class ImageViewElement: UIView, Widthable {
         contentView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
     }
     
-    func setupImage(_ image: UIImage?) {
+    func setupImage(_ image: UIImage?){
         if let sourceLogoImage = image {
             imageView.isHidden = false
             imageView.image = sourceLogoImage

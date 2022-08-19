@@ -7,9 +7,7 @@
 
 import UIKit
 
-class PriceAndNumberElement: UIView, Widthable{
-    var preferredWidth: CGFloat?
-    
+class PriceAndNumberElement: UIView{
 
     @IBOutlet var contentView: UIView!
     @IBOutlet var priceView: UIView!
@@ -34,13 +32,15 @@ class PriceAndNumberElement: UIView, Widthable{
         orderNumberLabel.textColor = UIColor.astronautBlue.withAlphaComponent(0.65)
     }
     
-    func setup(orderNumber: String, price: String, isPaid: Bool){
+    func setup(orderNumber: String, price: String, isPaid: Bool) {
         orderNumberLabel.text = orderNumber//(order.displayId)
         priceLabel.text = price//order.total
         priceLabel.textColor = isPaid ? UIColor.revelTextColor : UIColor.white
         layoutIfNeeded()
         priceView.backgroundColor = isPaid ? UIColor.revelProducGreen : UIColor.revelProductRed
         priceView.layer.cornerRadius = priceView.frame.height / 2
-        
+        #warning("how does layer cornerRadius works")
+        //make class final?
+        // find a way to make corner radius outside of setup
     }
 }

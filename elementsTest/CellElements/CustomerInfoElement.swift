@@ -7,8 +7,8 @@
 
 import UIKit
 
-class CustomerInfoElement: UIView, Widthable{
-    var preferredWidth: CGFloat?
+class CustomerInfoElement: UIView{
+
     @IBOutlet var containerView: UIView!
     @IBOutlet var stackView: UIStackView!
     @IBOutlet var customerName: UILabel!
@@ -33,7 +33,7 @@ class CustomerInfoElement: UIView, Widthable{
         vehicleInfo.textColor = UIColor.revelTextColor.withAlphaComponent(0.65)
     }
     
-    func setup(customerName: String, vehicleInfo: String? = nil ) {
+    func setup(customerName: String, vehicleInfo: String? = nil) {
         self.customerName.text = customerName
         if self.vehicleInfo == nil {
             self.vehicleInfo.isHidden = true

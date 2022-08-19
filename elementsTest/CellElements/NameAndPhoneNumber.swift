@@ -7,9 +7,7 @@
 
 import UIKit
 
-class NameAndPhoneNumber: UIView, Widthable {
-    var preferredWidth: CGFloat?
-    
+class NameAndPhoneNumber: UIView {
     
     @IBOutlet var containerView: UIView!
     @IBOutlet var nameLabel: UILabel!
@@ -34,7 +32,7 @@ class NameAndPhoneNumber: UIView, Widthable {
         phoneNumberLabel.textColor = UIColor.astronautBlue.withAlphaComponent(0.65)
     }
     
-    func setup(name: String, phoneNumber: String){
+    func setup(name: String, phoneNumber: String) {
         nameLabel.text = name
         phoneNumberLabel.text = phoneNumber
     }

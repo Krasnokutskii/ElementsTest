@@ -7,9 +7,7 @@
 
 import UIKit
 
-class ItemsQtyElement: UIView, Widthable{
-    var preferredWidth: CGFloat?
-    
+class ItemsQtyElement: UIView{
 
     @IBOutlet var containerView: UIView!
     @IBOutlet var itemsQty: UILabel!
@@ -32,7 +30,7 @@ class ItemsQtyElement: UIView, Widthable{
         itemsQty.textColor = UIColor.revelTextColor
     }
     
-    func setup(quantity: Int){
+    func setup(quantity: Int) {
         itemsQty.text = "\(quantity)"
     }
 }

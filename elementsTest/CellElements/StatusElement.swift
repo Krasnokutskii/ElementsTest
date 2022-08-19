@@ -7,10 +7,8 @@
 
 import UIKit
 
-class StatusElement: UIView, Widthable{
-    var preferredWidth: CGFloat?
+class StatusElement: UIView{
     
-
     @IBOutlet var containerView: UIView!
     @IBOutlet var statusLabel: UILabel!
    

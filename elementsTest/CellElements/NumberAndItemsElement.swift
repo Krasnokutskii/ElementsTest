@@ -7,9 +7,7 @@
 
 import UIKit
 
-class NumberAndItemsElement: UIView, Widthable {
-    var preferredWidth: CGFloat?
-    
+class NumberAndItemsElement: UIView {
    
     @IBOutlet var containerView: UIView!
     @IBOutlet var numberLabel: UILabel!
@@ -34,7 +32,7 @@ class NumberAndItemsElement: UIView, Widthable {
         itemsLabel.textColor = UIColor.astronautBlue
     }
     
-    func setup(itemsAmount: Int,number: String) {
+    func setup(itemsAmount: Int,number: String ) {
         itemsLabel.text = "\(itemsAmount)" + (itemsAmount > 0 ? itemsAmount == 1 ? " item" : " items" : "")
         numberLabel.text = number
     }

@@ -7,8 +7,7 @@
 
 import UIKit
 
-class OrderDueElement: UIView, Widthable{
-    var preferredWidth: CGFloat?
+class OrderDueElement: UIView{
     
     @IBOutlet var containerView: UIView!
     @IBOutlet var stackView: UIStackView!
