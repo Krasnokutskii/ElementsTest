@@ -10,77 +10,71 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    var customCell: CustomCell = .universal
+    var customCell: CustomCell = .universalOnline
  
     let orders: [Order] = TestData.orders
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
-        
+        // reuse identifier?
         view.backgroundColor = .systemBlue
         tableView.delegate = self
         tableView.dataSource = self
         
-        let doorDashName = UINib(nibName: "DoorDashQueueTableViewCell", bundle:nil)
-        tableView.register(doorDashName, forCellReuseIdentifier: "DoorDashQueueTableViewCell")
-        let universalName = UINib(nibName: "UniversalTableViewCell", bundle:nil)
-        tableView.register(universalName, forCellReuseIdentifier: "UniversalTableViewCell")
-        let driveThroughName = UINib(nibName: "DriveThroughQueueOrdersViewControllerTableCell", bundle:nil)
-        tableView.register(driveThroughName, forCellReuseIdentifier: "DriveThroughQueueOrdersViewControllerTableCell")
+        let universalName = UINib(nibName: UniversalTableViewCell.nibName, bundle:nil)
+        tableView.register(universalName, forCellReuseIdentifier: UniversalTableViewCell.reuseId)
     }
     
     
     @IBAction func buttonTapped(_ sender: Any) {
-        customCell = .doorDash
+        switch customCell {
+        case .universalOnline:
+            customCell = .universalDriveThrough
+        case .universalDriveThrough:
+            customCell = .universalDoorDash
+        case .universalDoorDash:
+            customCell = .universalOnline
+        }
         tableView.reloadData()
     }
     
 }
 extension ViewController: UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch customCell{
-        case .universal:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "UniversalTableViewCell",for: indexPath) as? UniversalTableViewCell else {
-                return UITableViewCell()
-            }
-            
-            let elementsArr: [RSCellElement] = [
-                .priceAndNumberView(100),
-                .timeElapsedView(80),
-                .itemsQtyView(50),
-                .customerInfoView(100),
-                .statusView(160)
-            ]
-            cell.setupCell(elements: elementsArr, with: orders[indexPath.row])
-            
-            return cell
-        case .doorDash:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "DoorDashQueueTableViewCell",for: indexPath) as? DoorDashQueueTableViewCell else{
-                return UITableViewCell()
-            }
-            //cell.setupWithOrder(Order(displayId: "124354", numberOfItems: 3, customerName: "Jhon", phone: "456-45-56", statusTitle: "ready", pickupDate: "today", pickupTime: "13:30"))
-            return cell
-        case .universalDoorDash:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "UniversalTableViewCell",for: indexPath) as! UniversalTableViewCell? else {
-                return UITableViewCell()
-            }
-           // cell.setupCellViews()
-            return cell
-        case .driveThrough:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "DriveThroughQueueOrdersViewControllerTableCell",for: indexPath) as! DriveThroughQueueOrdersViewControllerTableCell? else {
-                return UITableViewCell()
-            }
-            cell.orderNumberLabel.text = "123456"
-            cell.customerNameLabel.text = "Andry"
-            cell.customerVehicleLabel.text = "BMW"
-            cell.itemsQtyLabel.text = "IDK"
-            cell.priceLabel.text = "33$"
-            cell.statusLabel.text = "Waiting"
-            cell.timeElapsedLabel.text = "2:34"
-            cell.setup()
-            return cell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: UniversalTableViewCell.reuseId ,for: indexPath) as? RSUniversalTableViewCell else {
+            return UITableViewCell()
         }
+        var elementsArr: [RSCellElement]
+        switch customCell{
+        case .universalOnline:
+        elementsArr = [
+            .imageView(82),
+            .priceAndNumberView(120),
+            .customerInfoView(166),
+            .orderDueView(120),
+            .orderTypeView(126),
+            .statusView(126)
+            ]
+        case .universalDriveThrough:
+        elementsArr = [
+            .priceAndNumberView(136),
+            .timeElapsedView(136),
+            .itemsQtyView(50),
+            .customerInfoView(160),
+            .statusView(136)
+        ]
+        case .universalDoorDash:
+            elementsArr = [
+                .numberAndItemView(120),
+                .nameAndPhoneView(166),
+                .orderDueView(120),
+                .statusView(166)
+            ]
+        }
+        cell.setupCell(elements: elementsArr, with: orders[indexPath.row])
+
+        return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -91,22 +85,11 @@ extension ViewController: UITableViewDataSource,UITableViewDelegate{
     }
 }
 
-//        let arrs = [view2, view1, view3]
-//        for index in 0..<3{
-//            arrs[index].translatesAutoresizingMaskIntoConstraints = false
-//        }
-//        for index in 0..<3{
-//            stackView.addArrangedSubview(arrs[index])
-//        }
-//        stackView.arrangedSubviews[0].widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.1).isActive = true
-//        stackView.arrangedSubviews[1].widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.1).isActive = true
-//        stackView.arrangedSubviews[2].widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.3).isActive = true
-        
+
 enum CustomCell{
-    case universal
-    case doorDash
+    case universalOnline
+    case universalDriveThrough
     case universalDoorDash
-    case driveThrough
 }
 
 struct Order: OrderProtocol{
@@ -149,12 +132,12 @@ struct TestData{
               vehicleInfo: "BMW x3",
               pickupTime: "13:30",
               pickupDate: "Today",
-              orderType: "Delivery",
-              statusTitle: "Ready",
+              orderType: "AirTag del",
+              statusTitle: "Cancelled",
               sourceImage: UIImage(systemName: "airtag")!,
               timeElapsed: "3:42",
               timeElapsedIsOverdue: false,
-              itemsCount: 3,
+              itemsCount: 5,
               isPaid: true,
               numberOfItems: 4,
               phone: "8-800-555-35-35"),
@@ -164,9 +147,9 @@ struct TestData{
               vehicleInfo: nil,
               pickupTime: "13:30",
               pickupDate: "Today",
-              orderType: "Delivery",
+              orderType: "Pickup",
               statusTitle: "Ready",
-              sourceImage: UIImage(systemName: "airtag")!,
+              sourceImage: UIImage(systemName: "globe.europe.africa.fill")!,
               timeElapsed: "3:42",
               timeElapsedIsOverdue: false,
               itemsCount: 3,
@@ -180,9 +163,9 @@ struct TestData{
               pickupTime: "13:30",
               pickupDate: "Today",
               orderType: "Delivery",
-              statusTitle: "Ready",
-              sourceImage: UIImage(systemName: "airtag")!,
-              timeElapsed: "3:42",
+              statusTitle: "Waiting",
+              sourceImage: UIImage(systemName: "airplane")!,
+              timeElapsed: "7:53",
               timeElapsedIsOverdue: true,
               itemsCount: 3,
               isPaid: true,
