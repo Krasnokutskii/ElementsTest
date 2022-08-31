@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TimeElapsed" customModule="elementsTest" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RSTimeElapsedElement" customModule="elementsTest" customModuleProvider="target">
             <connections>
                 <outlet property="containerView" destination="1mW-WW-fQ0" id="zLd-Js-6MD"/>
-                <outlet property="timeElapsedLabel" destination="vNb-hO-GJy" id="HOc-eV-OnN"/>
+                <outlet property="timeElapsedLabel" destination="vNb-hO-GJy" id="elL-Ms-Enu"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

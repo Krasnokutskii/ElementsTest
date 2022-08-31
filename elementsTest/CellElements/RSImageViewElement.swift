@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ImageViewElement: UIView{
+class RSImageViewElement: UIView{
     
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var imageView: UIImageView!

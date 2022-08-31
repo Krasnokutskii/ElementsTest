@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CustomerInfoElement: UIView{
+class RSNameAndCarInfoElement: UIView{
 
     @IBOutlet var containerView: UIView!
     @IBOutlet var stackView: UIStackView!
@@ -25,12 +25,12 @@ class CustomerInfoElement: UIView{
     }
     
     private func commonInit(){
-        Bundle.main.loadNibNamed("CustomerInfoElement", owner: self)
+        Bundle.main.loadNibNamed("RSNameAndCarInfoElement", owner: self)
         addSubview(containerView)
         containerView.frame = self.bounds
         containerView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
         customerName.textColor = UIColor.astronautBlue
-        vehicleInfo.textColor = UIColor.revelTextColor.withAlphaComponent(0.65)
+        vehicleInfo.textColor = UIColor.revelTextFieldTextColor.withAlphaComponent(0.65)
     }
     
     func setup(customerName: String, vehicleInfo: String? = nil) {

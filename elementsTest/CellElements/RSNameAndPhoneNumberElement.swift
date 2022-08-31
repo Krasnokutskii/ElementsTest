@@ -1,5 +1,5 @@
 //
-//  ItemsQtyElement.swift
+//  NameAndPhoneNumber.swift
 //  elementsTest
 //
 //  Created by Yaroslav Krasnokutskiy on 17.8.22..
@@ -7,10 +7,11 @@
 
 import UIKit
 
-class ItemsQtyElement: UIView{
-
+class RSNameAndPhoneNumberElement: UIView {
+    
     @IBOutlet var containerView: UIView!
-    @IBOutlet var itemsQty: UILabel!
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var phoneNumberLabel: UILabel!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -23,14 +24,17 @@ class ItemsQtyElement: UIView{
     }
     
     private func commonInit(){
-        Bundle.main.loadNibNamed("ItemsQtyElement", owner: self)
+        Bundle.main.loadNibNamed("RSNameAndPhoneNumberElement", owner: self)
         addSubview(containerView)
         containerView.frame = self.bounds
         containerView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
-        itemsQty.textColor = UIColor.revelTextColor
+        nameLabel.textColor = UIColor.astronautBlue
+        phoneNumberLabel.textColor = UIColor.astronautBlue.withAlphaComponent(0.65)
     }
     
-    func setup(quantity: Int) {
-        itemsQty.text = "\(quantity)"
+    func setup(name: String, phoneNumber: String) {
+        nameLabel.text = name
+        phoneNumberLabel.text = phoneNumber
     }
+
 }

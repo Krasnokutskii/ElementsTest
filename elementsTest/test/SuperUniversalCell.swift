@@ -8,9 +8,11 @@
 import UIKit
 
 class SuperUniversalCell: RSUniversalTableViewCell{
+    override func awakeFromNib() {
+    }
     override func setup(with views: [UIView]) {
-        views[0].frame.size.width = 400
         super.setup(with: views)
+        stackView.backgroundColor = .cyan
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         contentView.backgroundColor =  selected ? UIColor.red : UIColor.cyan

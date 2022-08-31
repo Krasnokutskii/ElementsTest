@@ -1,5 +1,5 @@
 //
-//  OrderDueElement.swift
+//  OrderTypeElement.swift
 //  elementsTest
 //
 //  Created by Yaroslav Krasnokutskiy on 15.8.22..
@@ -7,14 +7,10 @@
 
 import UIKit
 
-class OrderDueElement: UIView{
-    
+class RSOrderTypeElement: UIView {
+
     @IBOutlet var containerView: UIView!
-    @IBOutlet var stackView: UIStackView!
-    
-    @IBOutlet var timeLabel: UILabel!
-    @IBOutlet var dayLabel: UILabel!
-  
+    @IBOutlet var orderTypeLabel: UILabel!
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -26,17 +22,15 @@ class OrderDueElement: UIView{
     }
     
     private func commonInit(){
-        Bundle.main.loadNibNamed("OrderDueElement", owner: self)
+        Bundle.main.loadNibNamed("RSOrderTypeElement", owner: self)
         addSubview(containerView)
         containerView.frame = self.bounds
         containerView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
-        timeLabel.textColor = UIColor.astronautBlue
-        dayLabel.textColor = UIColor.astronautBlue.withAlphaComponent(0.65)
+        orderTypeLabel.textColor = UIColor.astronautBlue
     }
     
-    func setup(pickupTime: String, pickupDate: String) {
-        timeLabel.text = pickupTime
-        dayLabel.text = pickupDate
+    func setup(orderType: String) {
+        orderTypeLabel.text = orderType
     }
 
 }

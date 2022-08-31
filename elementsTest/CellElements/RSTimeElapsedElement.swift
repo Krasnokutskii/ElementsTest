@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TimeElapsed: UIView{
+class RSTimeElapsedElement: UIView{
     
     @IBOutlet var containerView: UIView!
     @IBOutlet var timeElapsedLabel: UILabel!
@@ -23,11 +23,11 @@ class TimeElapsed: UIView{
     }
     
     private func commonInit(){
-        Bundle.main.loadNibNamed("TimeElapsed", owner: self)
+        Bundle.main.loadNibNamed("RSTimeElapsedElement", owner: self)
         addSubview(containerView)
         containerView.frame = self.bounds
         containerView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
-        timeElapsedLabel.textColor = UIColor.revelTextColor
+        timeElapsedLabel.textColor = UIColor.revelTextFieldTextColor
     }
     
     func setup(timeElapsed: String, isOverdue: Bool) {

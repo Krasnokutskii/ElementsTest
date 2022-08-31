@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PriceAndNumberElement: UIView{
+class RSPriceAndNumberElement: UIView{
 
     @IBOutlet var contentView: UIView!
     @IBOutlet var priceView: UIView!
@@ -25,7 +25,7 @@ class PriceAndNumberElement: UIView{
     }
     
     private func commonInit(){
-        Bundle.main.loadNibNamed("PriceAndNumberElement", owner: self)
+        Bundle.main.loadNibNamed("RSPriceAndNumberElement", owner: self)
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
@@ -33,14 +33,11 @@ class PriceAndNumberElement: UIView{
     }
     
     func setup(orderNumber: String, price: String, isPaid: Bool) {
-        orderNumberLabel.text = orderNumber//(order.displayId)
-        priceLabel.text = price//order.total
-        priceLabel.textColor = isPaid ? UIColor.revelTextColor : UIColor.white
+        orderNumberLabel.text = orderNumber
+        priceLabel.text = price
+        priceLabel.textColor = isPaid ? UIColor.revelTextFieldTextColor : UIColor.white
         layoutIfNeeded()
         priceView.backgroundColor = isPaid ? UIColor.revelProducGreen : UIColor.revelProductRed
         priceView.layer.cornerRadius = priceView.frame.height / 2
-        #warning("how does layer cornerRadius works")
-        //make class final?
-        // find a way to make corner radius outside of setup
     }
 }

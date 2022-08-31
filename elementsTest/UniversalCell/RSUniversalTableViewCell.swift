@@ -6,11 +6,8 @@
 //
 
 import UIKit
-protocol ElementCustomisable{
-    var elements: [UIView] { get set }
-}
 
-class RSUniversalTableViewCell: UITableViewCell, ElementCustomisable{
+class RSUniversalTableViewCell: UITableViewCell {
 
     static let reuseId = "RSUniversalTableViewCell"
     static let nibName = "RSUniversalTableViewCell"
@@ -25,9 +22,9 @@ class RSUniversalTableViewCell: UITableViewCell, ElementCustomisable{
     
     func setup(with views: [UIView]){
         self.elements = views
-        initializeStackView()
+        createStackView()
     }
-    func initializeStackView(){
+    private func createStackView(){
         stackView = UIStackView(arrangedSubviews: elements)
         setupStackView(stackView: stackView)
 

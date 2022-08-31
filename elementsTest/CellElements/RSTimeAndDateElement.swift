@@ -1,5 +1,5 @@
 //
-//  StatusElement.swift
+//  OrderDueElement.swift
 //  elementsTest
 //
 //  Created by Yaroslav Krasnokutskiy on 15.8.22..
@@ -7,11 +7,14 @@
 
 import UIKit
 
-class StatusElement: UIView{
+class RSTimeAndDateElement: UIView{
     
     @IBOutlet var containerView: UIView!
-    @IBOutlet var statusLabel: UILabel!
-   
+    @IBOutlet var stackView: UIStackView!
+    
+    @IBOutlet var timeLabel: UILabel!
+    @IBOutlet var dayLabel: UILabel!
+  
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -23,16 +26,17 @@ class StatusElement: UIView{
     }
     
     private func commonInit(){
-        Bundle.main.loadNibNamed("StatusElement", owner: self)
+        Bundle.main.loadNibNamed("RSTimeAndDateElement", owner: self)
         addSubview(containerView)
         containerView.frame = self.bounds
         containerView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
-        statusLabel.textColor = UIColor.astronautBlue
-        statusLabel.textAlignment = .center
+        timeLabel.textColor = UIColor.astronautBlue
+        dayLabel.textColor = UIColor.astronautBlue.withAlphaComponent(0.65)
     }
     
-    func setup(status: String) {
-        statusLabel.text = status
+    func setup(pickupTime: String, pickupDate: String) {
+        timeLabel.text = pickupTime
+        dayLabel.text = pickupDate
     }
 
 }

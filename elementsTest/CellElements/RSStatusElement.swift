@@ -1,5 +1,5 @@
 //
-//  OrderTypeElement.swift
+//  StatusElement.swift
 //  elementsTest
 //
 //  Created by Yaroslav Krasnokutskiy on 15.8.22..
@@ -7,10 +7,11 @@
 
 import UIKit
 
-class OrderTypeElement: UIView {
-
+class RSStatusElement: UIView{
+    
     @IBOutlet var containerView: UIView!
-    @IBOutlet var orderTypeLabel: UILabel!
+    @IBOutlet var statusLabel: UILabel!
+   
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -22,15 +23,22 @@ class OrderTypeElement: UIView {
     }
     
     private func commonInit(){
-        Bundle.main.loadNibNamed("OrderTypeElement", owner: self)
+        Bundle.main.loadNibNamed("RSStatusElement", owner: self)
         addSubview(containerView)
         containerView.frame = self.bounds
         containerView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
-        orderTypeLabel.textColor = UIColor.astronautBlue
+        statusLabel.textColor = UIColor.astronautBlue
+        statusLabel.textAlignment = .center
     }
     
-    func setup(orderType: String) {
-        orderTypeLabel.text = orderType
+    func setup(status: String) {
+        statusLabel.text = status
     }
 
+    override var intrinsicContentSize: CGSize {
+        return CGSize(width: 200, height: 50)
+    }
+    override func invalidateIntrinsicContentSize() {
+        
+    }
 }

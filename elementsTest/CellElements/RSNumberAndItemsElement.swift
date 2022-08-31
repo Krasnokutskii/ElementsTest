@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NumberAndItemsElement: UIView {
+class RSNumberAndItemsElement: UIView {
    
     @IBOutlet var containerView: UIView!
     @IBOutlet var numberLabel: UILabel!
@@ -24,7 +24,7 @@ class NumberAndItemsElement: UIView {
     }
     
     private func commonInit(){
-        Bundle.main.loadNibNamed("NumberAndItemsElement", owner: self)
+        Bundle.main.loadNibNamed("RSNumberAndItemsElement", owner: self)
         addSubview(containerView)
         containerView.frame = self.bounds
         containerView.autoresizingMask = [.flexibleWidth,.flexibleHeight]

@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OrderTypeElement" customModule="elementsTest" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RSOrderTypeElement" customModule="elementsTest" customModuleProvider="target">
             <connections>
                 <outlet property="containerView" destination="nNY-uv-xzx" id="M1d-Ew-fOE"/>
                 <outlet property="orderTypeLabel" destination="clN-FM-99d" id="Gir-kZ-w64"/>
