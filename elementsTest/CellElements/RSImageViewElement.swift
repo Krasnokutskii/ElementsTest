@@ -23,7 +23,7 @@ class RSImageViewElement: UIView{
     }
     
     private func commonInit(){
-        Bundle.main.loadNibNamed("ImageViewElement", owner: self)
+        Bundle.main.loadNibNamed("RSImageViewElement", owner: self)
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
